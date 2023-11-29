@@ -25,12 +25,14 @@ img {
   width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 .carrousel_ecran {
   /* largeur du parent pour chaque enfant */
   /* permet de garder toute la largeur du parent */
   width: 100%;
   flex: none;
+  scroll-snap-align: start;
 }
 .carrousel_ecran figure {
   /* enlève les marges par défaut */
