@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 1</title>
+</head>
     <script src="//unpkg.com/alpinejs" defer></script>
     <style>
-        /* en vrac :
-100% 100% 100% 0 auto border-box box-sizing 
-display height flex flex none margin 
-max-width width width
-*/ 
 
 * {
 /* change le box model */
@@ -26,24 +22,24 @@ img {
   /* aligne horizontalement les enfants */
   /* largeur du parent */
   display: flex;
-    margin: 0 auto;
+  width: 100%;
+  overflow-x: scroll
+  scroll-behavior: smooth;
 
 }
 .carrousel_ecran {
   /* largeur du parent pour chaque enfant */
   /* permet de garder toute la largeur du parent */
   width: 100%;
-  margin: auto;
+  flex: none;
 }
 .carrousel_ecran figure {
   /* enlève les marges par défaut */
   margin: none;
 } 
     </style>
-</head>
 
 <body>
-    <h1>Hello world</h1>
     <div class="carrousel" x-data="{}">
         <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
         <div class="carrousel_parent-ecrans">
