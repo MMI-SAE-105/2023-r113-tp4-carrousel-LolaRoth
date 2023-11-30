@@ -80,7 +80,8 @@ justify-content list-style margin none padding
     gap: 1rem;
     
 
-    
+
+
 }
 .caroussel_lien {
     
@@ -93,6 +94,12 @@ justify-content list-style margin none padding
     margin: 5px 10px;
     text-align: center;
 }
+.caroussel_lien:hover {
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    
+}   
 .actif {
     
     display: inline-block;
@@ -116,11 +123,22 @@ justify-content list-style margin none padding
       background-color: cadetblue;
       border-radius: 10px;
     }
+.Titre_page {
+    text-align: center;
+    color: indigo;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
 
 
   </style>
 
   <body>
+    <h1 class="Titre_page">
+        Menu carrousel
+    </h1>
     <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}">
       <button
         @click="p=$refs.parent;p.scrollLeft-=p.clientWidth"
